@@ -1,5 +1,3 @@
-import * as defineColors from "./defineColors.js"
-
 const collectionID = 9468595
 
 
@@ -34,4 +32,39 @@ const changeTheme = (collectionID) => {
 }
 
 
-changeTheme(collectionID)
+changeTheme(collectionID);
+
+let allButtons = [];
+
+document.querySelectorAll('.btn').forEach((elemento) => {
+  allButtons.push(elemento)
+});
+
+let igual = allButtons.pop();
+
+let output_content = document.querySelector('#output-content');
+
+let operacoes = "";
+
+  allButtons.forEach((el) => { // percorrer todos os botões
+    el.addEventListener('click', ()=> { // Toda vez que algum botão for clicado disparar o seguinte evento:
+     operacoes += el.innerText;
+     output_content.innerText = operacoes; // escrever no parágrafo responsável por mostrar os números
+    })
+  })
+
+output_content .addEventListener('click',() => {// evento TEMPORARIO feito para limpar o resultado das operações ao clicar no parágrafo responsável por mostrar os números
+      operacoes = "";
+      output_content.innerText = '';
+  })
+
+igual.addEventListener('click',()=> {
+  try { // tente
+    operacoes = eval(operacoes.replace(/x/g,' * ')); // executar a operação substituindo o x por * (operador de multiplicação do js)
+  output_content.innerText = operacoes; 
+  } catch(err){
+    operacoes = "";
+      output_content.innerText = 'Error';
+  }
+})
+
