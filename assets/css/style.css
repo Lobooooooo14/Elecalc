@@ -1,0 +1,137 @@
+::-moz-selection {
+    color: #482b42;
+    background: #ff9f93;
+  }
+  
+  ::selection {
+    color: #482b42;
+    background: #ff9f93;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 50pt;
+}
+
+@media (max-width: 600px) {
+    * {
+        font-size: 30pt;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: rgb(39 32 50);
+    background: linear-gradient(56deg, #272032 0%, rgb(89 56 76) 100%);
+    background-size: cover;
+}
+
+.icon {
+    fill: white;
+    width: 48px;
+    height: 48px;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator {
+    background-color: rgb(255 255 255 / 25%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.output-area {
+    padding: 5px 5px 0px 5px;
+}
+
+.output {
+    background-color: #482b42;
+    border-radius: 20px 20px 5px 5px;
+    padding: 5px;
+    font-family: monospace;
+    text-align: right;
+    color: #ff9f93;
+}
+
+.buttons {
+    display: flex;
+    padding: 5px;
+    gap: 5px 0px;
+    flex-direction: column;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 5px;
+}
+
+.numbers-session {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0px;
+}
+
+.operators-session {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0px;
+}
+
+.equal-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.btns-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px 5px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.number {
+    background-color: #482b42;
+    color: #ff9f93;
+    transition: all 0.3s ease;
+}
+
+.operator {
+    background-color: #ff9f93;
+    color: #482b42;
+    transition: all 0.3s ease;
+}
+
+.number:hover {
+    background-color: #ff9f93;
+    color: #482b42;
+}
+
+.operator:hover {
+    background-color: #482b42;
+    color: #ff9f93;
+}
+
+.equal {
+    border-radius: 5px 5px 20px 20px;
+}
