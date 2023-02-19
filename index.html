@@ -7,14 +7,15 @@
     <title>Elecalc</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="./assets/js/color-thief.js"></script>
 </head>
 <body>
     <div class="content">
         <div class="calculator" id="calculator">
             <div class="output-area">
                 <div class="output" id="output">
-                    <p>123</p>
+            <span id="output-content"></span>
+             <span>|</span>
                 </div>
             </div>
             <div class="buttons">
@@ -54,6 +55,7 @@
             </div>
         </div>
     </div>
-    <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/defineColors.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
