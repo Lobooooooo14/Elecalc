@@ -1,4 +1,6 @@
-export function defineColorOfNumbers(background, foreground) {
+let defineColors = {
+
+defineColorOfNumbers: function defineColorOfNumbers(background, foreground) {
     const btns_operators = document.getElementsByClassName("btn number")
 
     for (let i = 0; i < btns_operators.length; i++) {
@@ -20,9 +22,9 @@ export function defineColorOfNumbers(background, foreground) {
             element.style.color = foreground_rgb
           })
     }
-}
+},
 
-export function defineColorOfOperators(background, foreground) {
+defineColorOfOperators: function defineColorOfOperators(background, foreground) {
     const btns_operators = document.getElementsByClassName("btn operator")
 
     for (let i = 0; i < btns_operators.length; i++) {
@@ -44,9 +46,9 @@ export function defineColorOfOperators(background, foreground) {
             element.style.color = background_rgb
           })
     }
-}
+},
 
-export function defineColorOfOutput(background, foreground) {
+ defineColorOfOutput: function defineColorOfOutput(background, foreground) {
     const output = document.getElementById("output")
 
     const background_rgb = `rgb(${background[0]}, ${background[1]}, ${background[2]})`
@@ -54,12 +56,13 @@ export function defineColorOfOutput(background, foreground) {
         
     output.style.background = background_rgb
     output.style.color = foreground_rgb
-}
+},
 
-export function defineColorOfCalculator(background, shadow) {
+defineColorOfCalculator: function defineColorOfCalculator(background, shadow) {
     const calculator = document.getElementById("calculator")
 
     const background_rgb = `rgb(${background[0]}, ${background[1]}, ${background[2]}, 30%)`
         
     calculator.style.background = background_rgb
+},
 }
